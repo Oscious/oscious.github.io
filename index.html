@@ -7,6 +7,19 @@
     <title>OSCIOUS IN DEV</title>
 </head>
 <body>
+    <p>Cliquez sur le bouton pour générer une ID unique.</p>
+    <button onclick="generate()">Cliquez ici</button>
+    <p id="uniqueID"></p>
+    <script>
+       function generate() {
+       let id = () => {
+         return Math.floor((1 + Math.random()) * 0x10000)
+             .toString(16)
+             .substring(1);
+       }
+         document.getElementById("uniqueID").innerHTML = id();
+       }
+    </script>
     <a href="https://discord.gg/EGMJN9sqt2"><img src="https://64.media.tumblr.com/f2ac7cf958f7aafb4c55e8af5042f751/d14a318706591d0c-ff/s540x810/237002b7942538a4a4d855bedb8ba767756620b8.pnj"></a>
 </body>
 </html>
